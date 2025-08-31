@@ -1,38 +1,93 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your Name — Homepage</title>
+<meta name="description" content="Your minimalist academic/personal homepage." />
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;My Website&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="style.css"&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Welcome to My Website!&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;This site is built with just HTML and CSS 🎉&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;&amp;copy; 2025 Me&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
-</body>
+<main class="wrap">
+<header>
+    <div class="header-container">
+    <div class="name">Sarah Moon</div>
+  </div>
+  </header>
+
+<section id="about">
+<div class="about-container">
+    <img class="portrait" src="headshot.jpg" alt="Sarah Moon">
+    <div class="about-text">
+      <p>I am a PhD student in the economics department at MIT. I graduated from Yale University with a B.A. in Economics & Mathematics in 2023. 
+<br><br>
+I can be reached via email at sarahmn [at] mit [dot] edu. My CV is available <a href="CV.pdf" target="_blank">here</a>.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="working-papers">
+<h2>Working Papers</h2>
+<article class="pub">
+<h3>Optimal Policy Choices Under Uncertainty</h3>
+<p>[<a href="https://arxiv.org/abs/2503.03910" target="_blank">arxiv</a>]</p>
+<details>
+<summary>Abstract</summary>
+<p>Policymakers often make changes to policies whose benefits and costs are unknown and must be inferred from statistical estimates in empirical studies. In this paper I consider the problem of a planner who makes changes to upfront spending on a set of policies to maximize social welfare but faces statistical uncertainty about the impact of those changes. I set up an optimization problem that is tractable under statistical uncertainty and solve for the Bayes risk-minimizing decision rule. I propose an empirical Bayes approach to approximating the optimal decision rule that solves the planner's problem with posterior mean estimates of benefits and costs that have been shrunk to a flexibly estimated prior. I show theoretically that the welfare achieved by the empirical Bayes decision rule can approximate the welfare achieved by the optimal decision rule well, including in cases where a sample plug-in rule does not.</p>
+</details>
+</article>
+
+<article class="pub">
+<h3>Partial Identification of Individual-Level Parameters Using Aggregate Data in a Nonparametric Model</h3>
+<p>Revise and Resubmit, Econometric Reviews</p>
+<p>[<a href="https://arxiv.org/abs/2403.07236" target="_blank">arxiv</a>]</p>
+<details>
+<summary>Abstract</summary>
+<p>I develop a methodology to partially identify linear combinations of conditional mean outcomes when the researcher only has access to aggregate data. Unlike the existing literature, I only allow for marginal, not joint, distributions of covariates in my model of aggregate data. Bounds are obtained by solving an optimization program and can easily accommodate additional polyhedral shape restrictions. I provide an empirical illustration of the method to Rhode Island standardized exam data.</p>
+</details>
+</article>
+
+<article class="pub">
+<h3>Inference for Treatment Effects Conditional on Generalized Principal Strata using Instrumental Variables</h3>
+<p>with Yuehao Bai, Shunzhuang Huang, Andres Santos, Azeem Shaikh, and Edward Vytlacil</p>
+<p>[<a href="https://arxiv.org/abs/2411.05220" target="_blank">arxiv</a>]</p>
+<details>
+<summary>Abstract</summary>
+<p>We propose a general approach for inference for a broad class of treatment effect parameters in a setting of a multi-valued treatment and instrument with a general outcome variable. The class of parameters considered are those that can be expressed as the expectation of a function of the response type conditional on a generalized principal stratum. Here, the response type simply refers to the vector of potential outcomes and potential treatments, and a generalized principal stratum is a set of possible values for the response type. In addition to instrument exogeneity, the main substantive restriction imposed rules out certain values for the response types in the sense that they are assumed to occur with probability zero. It is shown through a series of examples that this framework includes a wide variety of parameters and assumptions that have been considered in the previous literature. A key result in our analysis is a characterization of the identified set for such parameters under these assumptions in terms of existence of a non-negative solution to linear systems of equations with a special structure. We propose methods for inference exploiting this special structure and recent results in Fang et al. (2023).</p>
+</details>
+</article>
+
+<article class="pub">
+<h3>On the Identifying Power of Generalized Monotonicity for Average Treatment Effects</h3>
+<p>with Yuehao Bai, Shunzhuang Huang, Azeem Shaikh, and Edward Vytlacil</p>
+<p>Revise and Resubmit, Journal of the American Statistical Association</p>
+<p>[<a href="https://arxiv.org/abs/2405.14104" target="_blank">arxiv</a>]</p>
+<details>
+<summary>Abstract</summary>
+<p>In the context of a binary outcome, treatment, and instrument, Balke and Pearl (1993, 1997) establish that the monotonicity condition of Imbens and Angrist (1994) has no identifying power beyond instrument exogeneity for average potential outcomes and average treatment effects in the sense that adding it to instrument exogeneity does not decrease the identified sets for those parameters whenever those restrictions are consistent with the distribution of the observable data. This paper shows that this phenomenon holds in a broader setting with a multi-valued outcome, treatment, and instrument, under an extension of the monotonicity condition that we refer to as generalized monotonicity. We further show that this phenomenon holds for any restriction on treatment response that is stronger than generalized monotonicity provided that these stronger restrictions do not restrict potential outcomes. Importantly, many models of potential treatments previously considered in the literature imply generalized monotonicity, including the types of monotonicity restrictions considered by Kline and Walters (2016), Kirkeboen et al. (2016), and Heckman and Pinto (2018), and the restriction that treatment selection is determined by particular classes of additive random utility models. We show through a series of examples that restrictions on potential treatments can provide identifying power beyond instrument exogeneity for average potential outcomes and average treatment effects when the restrictions imply that the generalized monotonicity condition is violated. In this way, our results shed light on the types of restrictions required for help in identifying average potential outcomes and average treatment effects.</p>
+</details>
+</article>
+
+</section>
+
+
+<section id="publications">
+<h2>Publications</h2>
+<article class="pub">
+<h3>Eliciting Willingness-To-Pay to Decompose Beliefs and Preferences that Determine Selection into Competition in Lab Experiments</h3>
+<p>with Yvonne Jie Chen, Deniz Dutz, Li Li, Edward Vytlacil, and Songfa Zhong</p>
+<p><a href="https://doi.org/10.1016/j.jeconom.2023.105652" target="_blank">Journal of Econometrics</a> (2024)</p>
+<p>[<a href="https://www.nber.org/papers/w31930" target="_blank">NBER working paper</a>]</p>
+<details>
+<summary>Abstract</summary>
+<p>This paper develops a partial-identification methodology for analyzing self-selection into alternative compensation schemes in a laboratory environment. We formulate a model of self-selection in which individuals select the compensation scheme with the largest expected valuation, which depends on individual- and scheme-specific beliefs and non-monetary preferences. We characterize the resulting sharp identified sets for individual-specific willingness-to-pay, subjective beliefs, and preferences, and develop conditions on the experimental design under which these identified sets are informative. We apply our methods to examine gender differences in preference for winner-take-all compensation schemes. We find that what has commonly been attributed to a gender difference in preference for performing in a competition is instead explained by men being more confident than women in their probability of winning a future (though not necessarily a past) competition.</p>
+</details>
+</article>
+</section>
+
+<footer>
+</footer>
+
 </html>

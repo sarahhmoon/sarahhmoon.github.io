@@ -1,39 +1,235 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
-</head>
-<body>
-<p class="p1">body {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>text-align: center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">header {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>background-color: #4CAF50;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding: 2rem;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">main {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding: 2rem;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">footer {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>background: #222;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin-top: 2rem;</p>
-<p class="p1">}</p>
-</body>
-</html>
+:root{
+  --maxw: 760px;
+  --fg: #111;
+  --muted: #555;
+  --link: #0a58ff;
+  --border: #e6e6e6;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.25rem 12rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--fg);
+  background: #fff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 0rem 0rem; /* slightly smaller padding */
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; /* name left, nav right */
+  align-items: center;
+}
+
+.header-container nav a {
+  margin-left: 1rem; /* spacing between links */
+  text-decoration: none;
+  color: var(--link);
+  font-weight: 500;
+  font-size: 1rem; /* slightly smaller than before */
+}
+
+.header-container nav a:last-child {
+  margin-right: 0;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start; /* aligns image and text at top */
+  gap: 2rem; /* space between image and text */
+  margin-top: 1rem;
+}
+
+.portrait {
+  width: 150px;   /* adjust as needed */
+  height: 150px;  /* same as width for square */
+  object-fit: cover;  /* keeps the image properly scaled */
+  flex-shrink: 0;     /* prevents shrinking */
+  border-radius: 0;   /* remove the circle effect */
+}
+
+.about-text {
+  flex: 1; /* text takes the remaining space */
+}
+
+.name {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 .25rem;
+}
+
+.tagline {
+  margin: .15rem 0;
+  color: var(--muted);
+}
+
+.links {
+  margin: .75rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .75rem;
+}
+
+.links a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.links a:hover {
+  border-color: currentColor;
+}
+
+@media (max-width:520px) {
+  .head-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sections */
+section {
+  margin: 2.5rem 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  letter-spacing: .02em;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  padding-top: .5rem;
+  border-top: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1rem;      /* same as body text */
+  font-weight: 600;      /* bold / semi-bold */
+  margin: 1rem 0 0; /* optional spacing like before */
+}
+
+article.pub p {
+  margin-top: 0; 
+  margin-bottom: 0;  
+}
+
+.meta {
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.pub {
+  margin-bottom: 1rem;
+}
+
+/* Links & lists */
+a {
+  color: var(--link);
+}
+
+a:hover {
+  opacity: .9;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li + li {
+  margin-top: .35rem;
+}
+
+/* Collapsible abstracts */
+details {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+details > summary {
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+  text-decoration: underline;
+}
+
+/* Custom right arrow */
+details > summary::before {
+  content: "+";               /* right-pointing arrow */
+  display: inline-block;
+  font-size: 1em;           /* smaller arrow */
+  transition: transform 0.2s; /* smooth rotation */
+  margin-right: 0.2rem;       /* extra space from text */
+}
+
+/* Rotate arrow when open */
+details[open] > summary::before {
+  transform: rotate(90deg);   /* points down when open */
+}
+
+article.pub details[open] > *:not(summary) {
+  display: block;          /* ensures block layout */
+  padding-top: 0.5rem;     /* space above content */
+  padding-bottom: 0.5rem;  /* space below content */
+}
+
+/* Collapsible content styling */
+details p {
+  line-height: 1.35;  /* adjust spacing inside collapsible abstracts */
+  margin: 0.5rem 0;  /* optional spacing between paragraphs */
+  font-size: 0.92rem; /* optional: slightly smaller text */
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column; /* stack image above text */
+    align-items: center;    /* center horizontally */
+    text-align: center;     /* center the text under the image */
+    gap: 1rem;              /* smaller gap */
+  }
+
+  .about-text {
+    flex: unset; /* let text take full width */
+  }
+
+  .portrait {
+    width: 120px;   /* slightly smaller on mobile */
+    height: 120px;
+  }
+  
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .header-container nav a {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
