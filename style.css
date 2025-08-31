@@ -173,7 +173,10 @@ details > summary {
   cursor: pointer;
   font-weight: 500;
   list-style: none;
-  text-decoration: underline;
+}
+
+details > summary:hover {
+  text-decoration: underline;  /* underline only when hovered */
 }
 
 /* Custom right arrow */
