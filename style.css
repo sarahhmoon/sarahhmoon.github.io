@@ -173,6 +173,7 @@ details > summary {
   cursor: pointer;
   font-weight: 500;
   list-style: none;
+  display: inline;
 }
 
 details > summary:hover {
