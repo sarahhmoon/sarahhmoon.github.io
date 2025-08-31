@@ -14,7 +14,8 @@ body {
   margin: 0;
   padding: 2rem 1.25rem 12rem;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  line-height: 1.4;
+  font-size: 0.95rem;
   color: var(--fg);
   background: #fff;
   text-rendering: optimizeLegibility;
@@ -140,7 +141,7 @@ article.pub p {
 }
 
 .pub {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Links & lists */
